@@ -38,6 +38,7 @@ public class FileManager implements IFileManager {
 	}
 
 	@Override
+//Buffereader para leer texto de una fuente de entrada, como un archivo o la entrada estándar del usuario.
 	public String leer(String ruta) {
 		String linea = "";
 		String data = "";
