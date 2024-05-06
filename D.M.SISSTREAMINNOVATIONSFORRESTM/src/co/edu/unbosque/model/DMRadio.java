@@ -49,6 +49,8 @@ public class DMRadio {
 				datosCancion[3] = cancion.getNombreArchivo();
 				fileManager.escribir(datosCancion);
 			}
+// busca una canción por su nombre en una lista de canciones y, si la encuentra, la agrega a una lista de reproducción y
+//escribe algunos datos de la canción utilizando un objeto fileManager
 		}
 	}
 
@@ -67,6 +69,10 @@ public class DMRadio {
 		}
 		return datosCancion;
 	}
+//El método devuelve el arreglo datosCancion. busca una canción por su nombre en una lista de canciones y
+// si la encuentra, agrega la canción a una lista de reproducción y devuelve un arreglo con algunos datos
+//de la canción encontrada.
+
 
 	public void gestionarCaracteristicas() {
 
@@ -85,6 +91,7 @@ public class DMRadio {
 			escribirArchivoEmisora("");
 			gestionarCaracteristicas();
 		}
+//se encarga de leer varias propiedades de configuración y realizar acciones adicionales en caso de que ocurra una excepción durante la lectura.
 
 	}
 
@@ -92,6 +99,8 @@ public class DMRadio {
 			String nombreArchivoMusica) {
 		canciones.add(new Cancion(nombreCancion, generoMusical, nombreArtista, nombreArchivoMusica));
 		return escribirArchivoPistaMusical(nombreCancion, nombreArtista, generoMusical, nombreArchivoMusica);
+//crea una nueva instancia de la clase Cancion con los datos proporcionados y la agrega a una lista de canciones. Luego, llama a un método escribirArchivoPistaMusical
+		//y devuelve el resultado de esa llamada.
 	}
 
 	public boolean escribirArchivoEmisora() {
@@ -113,6 +122,10 @@ public class DMRadio {
 				i = pistas.length;
 			}
 		}
+// lee un archivo de pistas utilizando un objeto fileManager y divide su contenido en líneas
+//Si los atributos tienen una longitud mayor o igual a 4, se crea una nueva instancia de la clase Cancion y se agrega a la lista canciones.
+
+
 	}
 
 	public void cargarInformacionArchivoParrilla() {
@@ -127,6 +140,9 @@ public class DMRadio {
 			}
 		}
 		playList.cargarParrilla(pistas);
+//lee un archivo de parrilla utilizando un objeto fileManager y divide su contenido en líneas.
+// Si los atributos tienen una longitud mayor o igual a 4, se crea una nueva instancia de la clase Cancion y se agrega al objeto ArrayList pistas.
+//llama al método cargarParrilla del objeto playList para cargar las pistas en la lista de reproducción.
 	}
 
 	public String[][] asignarDatosTablaAgregarCancion() {
@@ -141,6 +157,7 @@ public class DMRadio {
 		}
 		contadorCanciones = count;
 		return tabla;
+//crea una matriz bidimensional de tipo String y asigna los datos de las canciones almacenadas en la lista canciones a la matriz. 
 	}
 
 	public String[][] asignarDatosTablaParrilla() {
@@ -155,6 +172,7 @@ public class DMRadio {
 		}
 		playList.setContadorParrilla(count);
 		return tabla;
+//rea una matriz bidimensional de tipo String y asigna los datos de las pistas musicales almacenadas en el objeto playList a la matriz. 
 	}
 
 	public String[] generarListaDeCancionesDisponibles() {
@@ -163,6 +181,7 @@ public class DMRadio {
 			salida[i] = canciones.get(i).getNombre();
 		}
 		return salida;
+//crea un arreglo unidimensional de tipo String y asigna los nombres de las canciones almacenadas en la lista canciones a dicho arreglo. 
 	}
 
 	public void verificarExtensionArchivo(String rutaArchivo, String nombreCancion) throws Exception {
