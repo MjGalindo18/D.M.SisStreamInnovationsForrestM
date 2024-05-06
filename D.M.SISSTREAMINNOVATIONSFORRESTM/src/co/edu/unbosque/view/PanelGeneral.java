@@ -26,6 +26,8 @@ public class PanelGeneral extends JPanel {
 	private final String rutaGIFStop = "./Imagenes/Perrito quieto.jpg";
 	private Icon GIFPlay;
 	private Icon GIFStop;
+	// estas líneas de código definen las rutas de archivo y las variables necesarias para cargar
+	//y mostrar un GIF animado y una imagen estática en una interfaz gráfica de usuario.
 
 	public PanelGeneral() {
 		setLayout(new GridLayout(2, 1));
@@ -64,6 +66,8 @@ public class PanelGeneral extends JPanel {
 		etiquetaNombreEmisora.setText(nombreEmisora);
 		etiquetaModoTransmision.setText(modoTransmision);
 		etiquetaTipoMusica.setText(tipoMusica);
+		// este método actualiza los textos de las etiquetas en un panel o interfaz gráfica de usuario con los valores
+		//proporcionados en los parámetros nombreEmisora, modoTransmision y tipoMusica.
 	}
 
 	public void actualizarPanelDatosEmisora(String[] titulos) {
@@ -71,6 +75,9 @@ public class PanelGeneral extends JPanel {
 		etiquetaTituloNombre.setText(titulos[1]);
 		etiquetaTituloModo.setText(titulos[2]);
 		etiquetaTituloTipoMusica.setText(titulos[3]);
+		//este método actualiza el borde y los textos de las etiquetas en un panel 
+		//de datos de emisora utilizando los valores proporcionados en el arreglo titulos.
+
 	}
 
 	public void actualizarGIFStatus(Icon icon) {

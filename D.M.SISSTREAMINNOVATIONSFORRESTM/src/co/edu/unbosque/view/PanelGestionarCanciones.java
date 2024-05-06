@@ -127,12 +127,17 @@ public class PanelGestionarCanciones extends JPanel {
 	    if (result == JFileChooser.APPROVE_OPTION) {
 	        String selectedFile = fileChooser.getSelectedFile().getAbsolutePath();
 	        campoTextoArchivo.setText(selectedFile);
+	   // El JFileChooser muestra un cuadro de diálogo que permite al usuario seleccionar un archivo de su sistema de archivos.
+	   // , aplica un filtro para mostrar solo archivos con la extensión ".mp3" y actualiza un campo de texto con la ruta absoluta
+	   //del archivo seleccionado por el usuario.
 	    }
 	}
 
 	public void crearTabla(String[][] datos) {
 		for (int i = 0; i < datos.length; i++) {
 			modeloTabla.addRow(datos[i]);
+		//este ciclo for recorre cada fila del arreglo datos y agrega cada fila al modelo de una tabla utilizando 
+			//el método addRow del objeto modeloTabla.
 		}
 	}
 
@@ -145,6 +150,8 @@ public class PanelGestionarCanciones extends JPanel {
 		campoTextoNombreAutor.setText("");
 		campoTextoGeneroMusica.setText("");
 		campoTextoArchivo.setText("");
+		// el método actualizarTabla agrega una nueva fila a una tabla con los valores proporcionados, mientras que 
+		//el método borrarCampos borra el contenido de varios campos de texto.
 	}
 
 	public void actualizarPanelAgregarCancion(String[] titulos) {
@@ -166,6 +173,8 @@ public class PanelGestionarCanciones extends JPanel {
 		tablaCanciones.getColumnModel().getColumn(1).setPreferredWidth(200);
 		tablaCanciones.getColumnModel().getColumn(2).setPreferredWidth(150);
 		tablaCanciones.getColumnModel().getColumn(3).setPreferredWidth(100);
+		//el método actualizarPanelAgregarCancion actualiza el panel de agregar canciones estableciendo nuevos títulos, textos y anchos
+		//para los componentes del panel, así como para las columnas de una tabla.
 	}
 
 	public JLabel getEtiquetaNombreCancion() {

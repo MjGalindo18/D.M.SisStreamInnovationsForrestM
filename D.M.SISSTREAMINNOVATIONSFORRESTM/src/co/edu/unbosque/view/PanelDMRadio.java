@@ -14,8 +14,7 @@ public class PanelDMRadio extends JPanel {
 
 	public PanelDMRadio() {
 		setLayout(new BorderLayout());
-		setBackground(Color.white);
-
+		setBackground(Color.BLACK);
 		panelGeneral = new PanelGeneral();
 		panelEjecucion = new PanelEjecucion();
 		panelPlay = new PanelPlay();

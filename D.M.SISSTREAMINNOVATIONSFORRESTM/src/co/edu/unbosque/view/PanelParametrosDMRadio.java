@@ -95,6 +95,8 @@ public class PanelParametrosDMRadio extends JPanel {
 		campoTextoNombreEmisora.setText(nombre);
 		comboModoTransmision.setSelectedItem(modo);
 		campoTextoTipoMusica.setText(tipo);
+	//el método cargarCampos actualiza los campos de texto y el elemento seleccionado de un combo con los valores proporcionados
+	//en los parámetros nombre, modo y tipo.	
 	}
 
 	public void actualizarPanelInformacionEmisora(String[] titulos, String modoTransmision) {
@@ -119,6 +121,8 @@ public class PanelParametrosDMRadio extends JPanel {
 		} else if (modoTransmision.equals(comboModoTransmision.getItemAt(3))) {
 			comboModoTransmision.setSelectedIndex(3);
 		}
+		//actualiza el panel de información de una emisora estableciendo nuevos títulos, textos y elementos seleccionados 
+		//para los componentes del panel.
 	}
 
 	public void restablecerCampos(String nombre, String tipoMusica, String modoTransmision) {
@@ -135,6 +139,7 @@ public class PanelParametrosDMRadio extends JPanel {
 		} else if (modoTransmision.equals(comboModoTransmision.getItemAt(3))) {
 			comboModoTransmision.setSelectedIndex(3);
 		}
+	//restablece los campos de texto y el elemento seleccionado de un combo con los valores proporcionados en los parámetros nombre, tipoMusica y modoTransmision.
 	}
 
 	public JLabel getEtiquetaNombreEmisora() {

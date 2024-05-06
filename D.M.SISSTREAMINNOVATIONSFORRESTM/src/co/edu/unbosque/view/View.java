@@ -1,6 +1,7 @@
 package co.edu.unbosque.view;
 
 import java.awt.CardLayout;
+import java.awt.Color;
 
 import javax.swing.ImageIcon;
 import javax.swing.JFrame;
@@ -39,11 +40,13 @@ public class View extends JFrame {
 
 		setDefaultCloseOperation(EXIT_ON_CLOSE);
 		setSize(1200, 700);
-		setTitle("DMRadio");
+		setTitle("DMRADIO");
 		setLocationRelativeTo(null);
 		setVisible(true);
 		setResizable(false);
+		setBackground(Color.BLACK);
 
+		//El ActionListener es una interfaz en Java que se utiliza para detectar y responder a las acciones del usuario en una interfaz gráfica de usuario (GUI).
 		panelPrincipal.getBtnParametrizarEmisora().addActionListener(control);
 		panelPrincipal.getBtnGestionarCanciones().addActionListener(control);
 		panelPrincipal.getBtnProgramacion().addActionListener(control);

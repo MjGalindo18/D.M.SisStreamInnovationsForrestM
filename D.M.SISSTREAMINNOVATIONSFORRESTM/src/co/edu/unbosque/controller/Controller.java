@@ -25,6 +25,7 @@ public class Controller implements ActionListener {
 
 	@Override
 	public void actionPerformed(ActionEvent event) {
+		//es un método que se ejecuta cuando ocurre una acción en un componente y se utiliza para manejar y responder esta acción
 
 		if (event.getActionCommand().equals(vista.getPanelPrincipal().getPARAMETRIZAR())) {
 			vista.mostrarPanelParametrizar();
@@ -128,6 +129,7 @@ public class Controller implements ActionListener {
 			vista.mostrarMensajeError(dmRadio.getMensajesError()[0]);
 			vista.getPanelParametrosDMRadio().restablecerCampos(dmRadio.getNombreEmisora(), dmRadio.getTipoDeMusica(),
 					dmRadio.getModoTransmision());
+	//se encarga de validar y gestionar los datos de la emisora ingresados por el usuario, realizando diferentes acciones dependiendo de si los campos están vacíos o no.
 		}
 	}
 
@@ -164,6 +166,7 @@ public class Controller implements ActionListener {
 			vista.mostrarMensajeError(dmRadio.getMensajesError()[0]);
 			vista.getPanelGestionarCanciones().borrarCampos();
 		}
+		// Se encarga de gestionar el ingreso de una nueva canción en la interfaz de usuario.
 
 	}
 
@@ -189,6 +192,7 @@ public class Controller implements ActionListener {
 		} else {
 			vista.mostrarMensajeError(dmRadio.getMensajesError()[0]);
 		}
+	//Se encarga de validar y gestionar la adición de una canción realizando diferentes acciones dependiendo de si se ha seleccionado una canción o no
 	}
 
 	public void gestionarBorradoParrilla() {
@@ -201,7 +205,7 @@ public class Controller implements ActionListener {
 		dmRadio.getFileManager().borrarArchivoParrilla();
 		dmRadio.getPlayList().setContadorParrilla(1);
 		vista.getPanelDMRadio().getPanelPlay().manejarBotones(false);
-
+ // se encarga de realizar varias acciones para borrar y restablecer la parrilla de reproducción en la interfaz de usuario.
 	}
 
 	public void llenarDatosEmisoraTablas() {
@@ -215,6 +219,7 @@ public class Controller implements ActionListener {
 		if (dmRadio.getPlayList().getPistasMusicales().size() == 0) {
 			vista.getPanelDMRadio().getPanelPlay().manejarBotones(false);
 		}
+	// se encarga de llenar los datos en varias tablas de la interfaz basándose en los valores almacenados en dmRadio.
 	}
 
 	public void actualizarComponentesVista() {
@@ -226,6 +231,7 @@ public class Controller implements ActionListener {
 				dmRadio.getModoTransmision());
 		vista.getPanelGestionarCanciones().actualizarPanelAgregarCancion(dmRadio.getTitulosPanelAgregarCancion());
 		vista.getPanelGestionarCanciones().getModeloTabla().fireTableDataChanged();
+		// se encarga de actualizar varios componentes en la vista de la interfaz de usuario
 	}
 
 	public void verificarDatosEmisora() {
@@ -237,6 +243,8 @@ public class Controller implements ActionListener {
 		} else {
 			vista.habilitarBotones();
 		}
+	//se encarga de verificar si se han ingresado los datos de la emisora en la aplicación y toma acciones en consecuencia, mostrando un mensaje de aviso si los datos
+		//no están completos y habilitando los botones si los datos están completos.
 
 	}
 

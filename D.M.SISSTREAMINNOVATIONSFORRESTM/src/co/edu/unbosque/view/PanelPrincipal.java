@@ -49,8 +49,10 @@ public class PanelPrincipal extends JPanel {
 
 	@Override
 	public void paintComponent(Graphics g) {
-		super.paintComponent(g);
+		super.paintComponent(g);//llama al método paintComponent de la superclase para asegurar que se dibuje 
 		g.drawImage(new ImageIcon("Imagenes/logo.jpg").getImage(), 0, 0, getWidth(), getHeight(), this);
+		//dibuja una imagen en el componente utilizando el objeto Graphics para renderizar la imagen en las coordenadas (0, 0) 
+		//el método paintComponent(Graphics g) se utiliza para personalizar la representación visual de un componente al dibujar gráficos
 	}
 
 	public JButton getBtnParametrizarEmisora() {

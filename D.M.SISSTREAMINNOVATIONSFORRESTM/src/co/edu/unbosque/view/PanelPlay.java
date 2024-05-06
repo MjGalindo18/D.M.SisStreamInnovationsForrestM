@@ -82,6 +82,8 @@ public class PanelPlay extends JPanel {
 		botonPausa.setEnabled(valor);
 		botonPlay.setEnabled(valor);
 		botonRetrocede.setEnabled(valor);
+		// el método manejarBotones se encarga de habilitar o deshabilitar los botones botonAvanza, botonPausa, botonPlay y botonRetrocede
+		//según el valor del parámetro valor.
 	}
 
 	public JButton getBotonRetrocede() {
